@@ -1,0 +1,96 @@
+<%- include('partials/header') %>
+
+<div class="container" style="padding-top: 150px;">
+
+    <h1 class="display-6 center" style="text-decoration: underline; font-weight: 550;">MARKETING KIT DETAILS</h1>
+    <br>
+    <div class="row">
+        <div class="col-md-6 col-sm-12">
+            <img src="/assets/images/product-image.png" alt="" class="default-img img-fluid image-show">
+        </div>
+        <div class="col-md-6 col-sm-12 product-body">
+            <h1 class="display-5 center">BIZQUESTA MARKETING AND BRANDING KIT</h1>
+            <br>
+            <p class="center">Passive Income 10% <br>
+                Affiliate Income Rs 200 <br>
+                24/7 Support <br> </p>
+            <br>
+                <h1 class="display-5 center"> <strike style="color: red;">₹1,999</strike>  ₹300</h1>
+            <br>
+            <div class="center">
+                <br>
+                <!-- Instamojo -->
+                <!-- https://test.instamojo.com/@setstream_in/l72636ffaf3e04a63bec1e90956dc65d5/ -->
+                <!-- https://www.instamojo.com/@socialmediacourse/le3e306aeb4b7478bb48d82ff0bfb799c/ -->
+
+<!--                 
+                <a href="https://www.instamojo.com/@socialmediacourse/le3e306aeb4b7478bb48d82ff0bfb799c/" style="color:#ffffff; background:#ff695f;  padding: 10px 20px; border-radius:4px; text-align: center;"   data-layout="vertical">Buy Now</a>
+                <script src="https://js.instamojo.com/v1/button.js"></script> -->
+
+                <!-- payumoney -->
+                <!-- <div> <a style=" width: 135px; background-color: #ff695f; text-align: center; font-weight: 800; padding: 11px 0px; color: white; font-size: 12px; display: inline-block; text-decoration: none; " href='https://pmny.in/RIdWfONUowdk' > Buy Now </a> </div> -->
+<!-- 
+                razorpay api -->
+<!-- 
+                <button style="color:#ffffff; background:#ff695f;  padding: 10px 20px; border-radius:4px; text-align: center;" id="rzp-button1">Buy now</button> -->
+
+                <!-- razorpay btn -->
+                <!-- Test button -->
+                <!-- <form><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_HhxidTpctQAMvT" async> </script> </form> -->
+
+                <!-- real mode -->
+                <form><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_HhxS4Sg2tRTOf1" async> </script> </form>
+            </div>
+        <br>
+        <br>
+    </div>
+    <br>
+    <br>
+    <h1 class="display-6 center" style="text-decoration: underline; font-weight: 550;">REVIEWS</h1>
+    <br>
+
+    <div class="center" style="border: 1px solid black; border-radius: 25px; padding: 10px; 
+    box-shadow: 5px 5px #ff695f;">
+        <p>Aksh said: "This was an life changing experience!"</p>
+    </div>
+    <br>
+    <div class="center" style="border: 1px solid black; border-radius: 25px; padding: 10px; 
+    box-shadow: 5px 5px #ff695f;">
+        <p>Rahul said: "Amazing Community and full of opportunities."</p>
+    </div>
+    <br>
+    <div class="center" style="border: 1px solid black; border-radius: 25px; padding: 10px; 
+    box-shadow: 5px 5px #ff695f;">
+        <p>Vikas said: "Useful knowledge was provided in the videos."</p>
+    </div>
+<!--     
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script> -->
+    <!-- <script>
+		axios.post('/order').then(function(info){
+			console.log(info);
+
+			var options = {
+					"key": "rzp_live_bFFkZc97K2uS1K", // Enter the Key ID generated from the Dashboard
+					"amount": "30000", // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+					"currency": "INR",
+					"name": "Bizquesta",
+					"description": "Pay For Bizquesta Affiliate Services",
+					"order_id": info.data.id, //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
+					"theme": {
+						"color": "#ff695f"
+					},
+					callback_url: '/is-order-complete',
+  					redirect: true
+				};
+			var rzp1 = new Razorpay(options);
+			document.getElementById('rzp-button1').onclick = function(e){
+				rzp1.open();
+				e.preventDefault();
+			}
+		});
+	</script> -->
+
+</div>
+
+<%- include('partials/footer') %>

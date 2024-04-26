@@ -1,0 +1,66 @@
+<%- include('partials/header') %>
+
+<% var err = true; %>
+
+<% var count = 0; %>
+
+              
+<div class="container center" style="padding-top: 150px;">
+
+    <h1 style="font-family: 'PT Serif', serif;" class="center">Your search results are:</h1>
+    <br>
+    <br>
+    <h3 class="center"style="text-decoration: underline;">Match Found in the Database Server!</h3>
+            <main id="main">
+                <div class="center container div-port" style="border: 1px solid black; margin-top: 30px; border-radius: 20px;">
+                    <br>
+                    <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th scope="col">Username</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Phone</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">User Reference Id</th>
+                            <th scope="col">Delete</th>
+                            <th scope="col">Commissions</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <% for(var i=0; i< users.length; i++){ %>
+                                    <% if(users[i].username.toLowerCase().search(input.toLowerCase()) != -1 || users[i].email.toLowerCase().search(input.toLowerCase()) != -1){ %>                         
+                                        <td><%= users[i].username %></td>
+                                        <td><%= users[i].name %></td>
+                                        <td><%= users[i].phone %></td>
+                                        <td><%= users[i].email %></td>
+                                        <td><%= users[i].userreference %></td>
+                                        <td><a href="/users/<%= users[i]._id %>">Delete</a></td>
+                                        <td><a href="/users/details/<%= users[i]._id %>">Commissions</a></td>
+                                        </tr>
+                                                        
+                                        <% currentintroducer = "" %>
+                                        <% commision = 0 %>
+                                        <% active = 0 %>
+                                        <% passive = 0 %>
+                                        <% count ++ %>
+                                    <% } %>
+                                <% } %>
+                        </tbody>
+                    </table>  
+                    </div>
+                    <br>
+<% if(count > 0){ %>
+    <p class="center result-count"><%= count %> results found</p>
+<% } else { %>
+    <p class="center result-count">No resuts found!</p>
+<% } %>
+
+</main>
+</div>
+
+<style>
+    tr:nth-child(even) {background-image: linear-gradient(to right, #FF3600, white);}
+  </style>
+<%- include('partials/footer') %>
